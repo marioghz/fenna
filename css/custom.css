@@ -1,0 +1,184 @@
+/* Your custom css code goes here */
+
+#radios{
+    height: auto; 
+    padding: 6px 12px; 
+    border:1px solid #e6e5e5; 
+    border-radius: 4px;
+    background-color: #eee;
+    text-align: center;
+    margin: 0px 0px 12px;
+}
+
+
+#radios_subs{
+    height: auto; 
+    padding: 6px 12px; 
+    border:1px solid #e6e5e5; 
+    border-radius: 4px;
+    background-color: #eee;
+}
+
+
+#box{
+    height: 0; 
+    padding: 6px 12px; 
+    border:1px solid #e6e5e5; 
+    border-radius: 4px;
+    background-color: #eee;
+    margin-top:0;
+    overflow:hidden;
+    visibility: "hidden";
+}
+
+#div_subs_info{
+  opacity: 0;
+  visibility: hidden;
+}
+
+#start{
+    height: auto; 
+    padding: 6px 12px; 
+    border:1px solid #e6e5e5; 
+    border-radius: 4px;
+    background: #fff;
+    color: #637381;
+    line-height: 26px;
+    font-size: 16px;
+    font-weight: 300;
+    font-family: "Lato", Arial, sans-serif;
+}
+
+
+
+
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #E02401;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #E02401;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 4px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+
+
+  .collapsible {
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-family: Lato,Arial,sans-serif;
+    font-size: 14px;
+    border-radius: 4px;
+    margin: 0px 0px 2px;
+  }
+  
+  .active1, .collapsible:hover {
+    background-color: rgb(0, 0, 0);
+    
+  }
+  
+  .collapsible:after {
+    content: '\002B';
+    color: white;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+  }
+  
+  .active1:after {
+    content: "\2212";
+  }
+  
+  .content {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: whitesmoke;
+  }
+
+
+
+
+
+
+  #bank_accounts {
+    font-family: Lato,Arial,sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  #bank_accounts td, #bank_accounts th {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  #bank_accounts tr:nth-child(even){background-color: #f2f2f2;}
+  
+  #bank_accounts tr:hover {background-color: rgba(0, 0, 0, 0.3);}
+  
+  #bank_accounts th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+  }

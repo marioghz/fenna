@@ -5,6 +5,7 @@ jQuery(document).ready(function() {
 
 });
 
+
 /// definimos las fechas limites de las causas
 v_fecha_causa_1 = "Jun 31, 2022 23:59:59";
 v_fecha_causa_2 = "Jul 31, 2022 23:59:59";
@@ -73,5 +74,7 @@ function f_tempo(v_id,v_fecha) {
   f_tempo("v_temp_causa_5",v_fecha_causa_5);
   f_tempo("v_temp_causa_6",v_fecha_causa_6);
   
- 
-  document.getElementsByClassName
+
+
+
+

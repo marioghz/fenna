@@ -101,6 +101,49 @@ document.getElementById('start').setAttribute("min", today);
 		return valid;
 	}
 
+	function subscripcion() {
+		p_a = document.getElementById("rad_plan_a");
+		p_b = document.getElementById("rad_plan_b");
+		p_c = document.getElementById("rad_plan_c");
+		p_per = document.getElementById("rad_plan_per");
+
+		r_m = document.getElementById("rad_per_mes");
+		r_t = document.getElementById("rad_per_tri");
+		r_s = document.getElementById("rad_per_sem");
+
+		v_calendar=document.getElementById("start");
+		v_subs = document.getElementById('check_subs');
+		v_amount = document.getElementById("amount_subs");
+
+		if (v_subs.checked==true){
+			p_a.checked = true;
+			p_a.disabled = false;
+			p_b.disabled = false;
+			p_c.disabled = false;
+			p_per.disabled = false;
+			
+			r_m.disabled = false;
+			r_t.disabled = false;
+			r_s.disabled = false;
+			v_calendar.disabled = false;
+			f_plan();
+		}
+		else{
+			p_a.disabled = true;
+			p_b.disabled = true;
+			p_c.disabled = true;
+			p_per.disabled = true;
+			
+			r_m.disabled = true;
+			r_t.disabled = true;
+			r_s.disabled = true;
+			v_calendar.disabled = true;
+			v_amount.disabled = false;
+		}
+
+
+	}
+
 
 	function openModal() {
 		v_subs = document.getElementById('check_subs')

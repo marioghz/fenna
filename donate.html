@@ -19,420 +19,376 @@
     <link rel="icon" href="img/favicon_io/favicon.ico">
 
 
+<!--<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">-->
 
-    <!--[if lt IE 9]>
-      <script src="js/vendor/html5shiv.min.js"></script>
-      <script src="js/vendor/respond.min.js"></script>
-    <![endif]-->
-  </head>
-  <body>
+<link rel="stylesheet" href="css/wizard.css">
+<body>
 
-    
     <nav class="navbar navbar-default probootstrap-navbar">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="index.html"></a>
-        </div>
-        <div id="navbar-collapse" class="navbar-collapse collapse">
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="index.html">Principal</a></li>
-            <li><a href="about.html">Sobre Nosotros</a></li>
-            <li><a href="news.html">Noticias</a></li>
-            <li><a href="causes.html">Causas</a></li>
-            <li class="dropdown">
-              <a href="#" data-toggle="dropdown" class="dropdown-toggle">Páginas</a>
-              <ul class="dropdown-menu">
-                <li><a href="testimonial.html">Testimonios</a></li>
-                <li><a href="gallery.html">Galería</a></li>
-                <li><a href="contact.html">Contacto</a></li>
-                <!--<li class="dropdown-submenu dropdown">
-                  <a href="#" data-toggle="dropdown" class="dropdown-toggle"><span>Sub Menu</span></a>
-                  <ul class="dropdown-menu">
-                    <li><a href="blog.html">Segundo Nivel Menu</a></li>
-                    <li><a href="#">Segundo Nivel Menu</a></li>
-                  </ul>
-                </li>-->
-              </ul>
-            </li>
-            
-            <!--<li class="probootstra-cta-button last"><a href="donate.html" class="btn btn-primary" onclick="getData('Todas las Causas')">Donar</a></li>-->
-          </ul>
-        </div>
-      </div>
-    </nav>
-      
-      <section class="probootstrap-hero probootstrap-hero-inner" style="background-image: url(img/hero_bg_bw_1.jpg)"  data-stellar-background-ratio="0.5">
         <div class="container">
-          <div class="row">
-            <div class="col-md-12">
-              <div class="probootstrap-slider-text probootstrap-animate" data-animate-effect="fadeIn">
-                <h1 class="probootstrap-heading probootstrap-animate">Donar <span>Fundación para el Fomento Educativo y de Nutrición para la Niñez y Adolecencia</span></h1>
-              </div>
-            </div>
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html"></a>
           </div>
-        </div>
-      </section>
-
-      <section class="probootstrap-section" id='i'>
-        <div class="container">
-          <div class="row">
-          <div class="col-md-6 probootstrap-animate">
-            <form action="#" method="post" class="probootstrap-form">
-              <h3>Información Personal</h3>
-              <div class="form-group">
-                <label for="name">Nombre completo</label>
-                <input type="text" class="form-control" id="name" name="name" required oninput="f_info()">
-              </div>
-              <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" class="form-control" id="email" name="email" pattern="[1-4]{5}" required>
-              </div>
-              <div class="form-group">
-                <label for="telefono">Telefono</label>
-                <input type="tel" class="form-control" id="tefefono" name="tefefono" pattern="[0-9]{3}" aria-label="3-digit area code" size="2">
-              </div>
-              <div class="form-group">
-                <label for="Causa">Causa</label>
-                <input type="text" class="form-control" id="causa" name="causa" placeholder="Todas las Causas" disabled>
-              </div>
-              <div class="form-group">
-                <label for="A-nombre">A nombre</label>
-                <div id="radios">
-                  <label><input type="radio" name="radio_anombre" style="margin-top:12px;" value="Personal"checked onclick="f_info()"> Personal </label>
-                  <label><input type="radio" name="radio_anombre" style="margin-left:1em" value="Empresarial" onclick="f_info()"> Empresarial </label>
-                  <label><input type="radio" name="radio_anombre" style="margin-left:1em" value="Anónimo" onclick="f_info()"> Anónimo </label>
-                </div> 
-          
-              </div>
-
-              <hr>
-
-            </form>
-
-            <h3>Transferencia Bancaria</h3>
-            <table id="bank_accounts" >
-              <tr>
-                <th>Banco</th>
-                <th>Moneda </th>
-                <th>Número de Cuenta IBAN </th>
-              </tr>
-              <tr>
-                <td>BAC San José</td>
-                <td>Colones</td>
-                <td>CR 3201 0200 0009 5233 4017</td>
-              </tr>
-              <tr>
-                <td>BAC San José</td>
-                <td>Dólares</td>
-                <td>CR 3501 0200 0092 9174 4158</td>
-              </tr>
-              <tr>
-                <td>Banco de Costa Rica</td>
-                <td>Colones</td>
-                <td>CR 3201 0200 0009 5233 4017</td>
-              </tr>
-              <tr>
-                <td>Banco de Costa Rica</td>
-                <td>Dólares</td>
-                <td>CR 3501 0200 0092 9174 4158</td>
-              </tr>
-              <tr>
-                <td>Banco Nacional</td>
-                <td>Colones</td>
-                <td>CR 3201 0200 0009 5233 4017</td>
-              </tr>
-              <tr>
-                <td>Banco Nacional</td>
-                <td>Dólares</td>
-                <td>CR 3501 0200 0092 9174 4158</td>
-              </tr>
-              <tr>
-                <td>Davivienda</td>
-                <td>Colones</td>
-                <td>CR 3201 0200 0009 5233 4017</td>
-              </tr>
-              <tr>
-                <td>Davivienda</td>
-                <td>Dólares</td>
-                <td>CR 3501 0200 0092 9174 4158</td>
-              </tr>
-            </table>
-
-
-
-
-
-
-
-
-          </div>
-
-          
-        
-            <!-- modal -->
-            <div class="modal1-overlay" id="div_modal_1">
-              <div class="modal1" id="div_modal_2">
-                
-                <a class="close-modal" onclick="closeModal(false)">
-                  <img src="fonts/icomoon/x.svg" width="20px" height="20px"><img/>
-                </a><!-- close modal -->
-
-                <div class="modal1-content">
-                  
-                  
-                  
-                    <!--Header-->
-                    <div class="modal-header">
-                      <h3>Modelo de Subscripción</h3>
-
-                    </div>
-              
-                    <!--Body-->
-                    <div class="modal-body">
-                      <div class="text-center">
-
-                        <div class="form-group modal-header">
-                          <label for="Plan">Tipo de Donación</label>
-                          <div id="radios">
-                            <label><input type="radio" name="radio2" id="rad_plan_a" style="margin-top:12px;" value='Plan A' checked onclick="f_plan()"> Plan A </label>
-                            <label><input type="radio" name="radio2" id="rad_plan_b" style="margin-left:1em" value='Plan B' onclick="f_plan()"> Plan B </label>
-                            <label><input type="radio" name="radio2" id="rad_plan_c" style="margin-left:1em" value='Plan C' onclick="f_plan()"> Plan C </label>
-                            <label><input type="radio" name="radio2" id="rad_plan_per" style="margin-left:1em" value='Personalizado' onclick="f_plan()"> Personalizado </label>
-                          </div> 
-                        </div>
-
-                        <div class="form-group" > 
-                          <label for="amt">Monto en dólares</label>
-                          <input type="number" class="form-control" id="amount_subs" name="amount" value='100';  disabled>
-                        </div>
-
-                        <div class="form-group">
-                          <label for="per">Periodicidad</label>
-                          <div id="radios" name="div_rad">
-                            <label><input type="radio" name="rad_per" id="rad_per_mes" style="margin-left:1em" value='Mensual' disabled checked> Mensual </label>
-                            <label><input type="radio" name="rad_per" id="rad_per_tri" style="margin-left:1em" value='Trimestral' disabled> Trimestral </label>
-                            <label><input type="radio" name="rad_per" id="rad_per_sem" style="margin-left:1em" value='Semestral' disabled> Semestral </label>
-                          </div> 
-                        </div>
-
-                        <div class="form-group" > 
-                          <label>Fecha de inicio</label>
-                          <div id="radios">
-                          <input type="date" id="start" name="trip-start">
-                         </div>
-                        </div>
-                      </div>
-                      <hr>
-                      <p class="text-center">
-                        <strong> <p class="text-center">
-                          <strong>* Puedes cancelar tu subscripción envíanondonos un mensaje a nuestro contacto. Lo ejecutaremos de inmediato.</strong>
-                        </p></strong>
-                      </p>
-                    </div>
-                    <!--Footer-->
-                    <div class="modal-footer justify-content-center">
-                      <a type="button" class="btn btn-primary" onclick="closeModal(true)">Aceptar
-                        <i class="fa fa-paper-plane ml-1"></i>
-                      </a>
-                      <a type="button" class="btn btn-black" data-dismiss="modal1" onclick="closeModal(false)">Cancelar</a>
-                    </div>
-                </div><!-- content -->
-              </div><!-- modal -->
-            </div><!-- overlay -->
-
-
-
-
-
-
-          <h3  class="probootstrap-animate" id="h3_tarjeta">Tarjeta de Crédito/Débito</h3>
-          <div class="col-md-4 probootstrap-animate checkout">
-            
-            <div class="credit-card-box">
-              <div class="flip">
-                <div class="front">
-                  <div class="chip"></div>
-                  <div class="logo">
-                    <img id="marca1" src="fonts/icomoon/others.svg" width="47.834px" height="47.834px"><img/>
-                  </div>
-                  <div class="number"></div>
-                  <div class="card-holder">
-                    <label>Titular de la tarjeta</label>
-                    <div></div>
-                  </div>
-                  <div class="card-expiration-date">
-                    <label>Fecha de expiración</label>
-                    <div></div>
-                  </div>
-                </div>
-                <div class="back">
-                  <div class="strip"></div>
-                  <div class="logo">
-                    <img id="marca2" src="fonts/icomoon/others.svg" width="47.834px" height="47.834px"><img/>
-                  </div>
-                  <div class="ccv">
-                    <label>CCV</label>
-                    <div></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <form class="form" autocomplete="off" novalidate>
-
-              <div id="radios">
-                <label for="Tipo-Donacion">Donativo por Subscripción</label>
-                <label class="switch" style="margin-left:1em;"><input type="checkbox" id="check_subs" onclick="openModal()"><span class="slider round"> </span></label>
-              </div>
-
-              <div id="radios">
-                <label for="amt" >Monto en dólares</label>
-                <input type="number" style="margin-left:1em;" class="form" id="amount" name="amount">
-              </div>
-
-              <fieldset>
-                <label for="card-number">Número de tarjeta</label>
-                <input type="num" id="card-number" class="input-cart-number" maxlength="4" oninput="f_marca()" />
-                <!--<input type="num" id="card-number1" class="input-cart-number" maxlength="4" /> -->
-                <input type="num" id="card-number-1" class="input-cart-number" maxlength="4" />
-                <input type="num" id="card-number-2" class="input-cart-number" maxlength="4" />
-                <input type="num" id="card-number-3" class="input-cart-number" maxlength="4" />
-              </fieldset>
-              <fieldset>
-                <label for="card-holder">Titular de la tarjeta</label>
-                <input type="text" id="card-holder" maxlength="30" />
-              </fieldset>
-              <fieldset class="fieldset-expiration">
-                <label for="card-expiration-month">Fecha de expiración</label>
-                <div class="select">
-                  <select id="card-expiration-month">
-                    <option></option>
-                    <option>01</option>
-                    <option>02</option>
-                    <option>03</option>
-                    <option>04</option>
-                    <option>05</option>
-                    <option>06</option>
-                    <option>07</option>
-                    <option>08</option>
-                    <option>09</option>
-                    <option>10</option>
-                    <option>11</option>
-                    <option>12</option>
-                  </select>
-                </div>
-                <div class="select">
-                  <select id="card-expiration-year">
-                    <option></option>
-                    <option>2019</option>
-                    <option>2020</option>
-                    <option>2021</option>
-                    <option>2022</option>
-                    <option>2023</option>
-                    <option>2024</option>
-                    <option>2025</option>
-                    <option>2026</option>
-                    <option>2027</option>
-                    <option>2028</option>
-                  </select>
-                </div>
-              </fieldset>
-              <fieldset class="fieldset-ccv">
-                <label for="card-ccv">CCV</label>
-                <input type="text" id="card-ccv" maxlength="4" />
-              </fieldset>
-              <button class="btn" type="submit"><i class="fa fa-lock"></i> Donar</button>
-            </form>
-
-
-          </div>
-
-
-          <div class="col-md-6 probootstrap-animate" id="div_subs_info">
-            <div id="radios">
-              <label id="label_name" style="margin-top:12px;"></label>
-              <hr style="margin-top: 0px; margin-bottom: 0px;">
-              <label id="label_details" style="margin-top:12px;"></label>
-              
-              <hr style="margin-top: 0px; margin-bottom: 0px;;">
-              <label id="label_plan" style="margin-top:12px;"></label>
-              <label id="label_info" style="margin-top:12px;"></label>
-            </div>
-
-          </div>
-
-        
-      </section>
-
-      
-
-      <footer class="probootstrap-footer probootstrap-bg">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-4 probootstrap-animate">
-              <div class="probootstrap-footer-widget">
-                <h3>Sobre Nosotros</h3>
-                <p>FENNA es una organización sin fines de lucro que se dedica a impulsar causas de carácter educativo y de nutrición para la Niñez y Adolescencia en Costa Rica. Encuéntranos además en nuestras redes sociales y ayúdanos a ayudar.</p>
-                <ul class="probootstrap-footer-social">
-                  <li><a href="#"><i class="icon-facebook"></i></a></li>
-                  <li><a href="#"><i class="icon-instagram"></i></a></li>
-                  <li><a href="#"><i class="icon-youtube"></i></a></li>
+          <div id="navbar-collapse" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="index.html">Principal</a></li>
+              <li><a href="about.html">Sobre Nosotros</a></li>
+              <li><a href="news.html">Noticias</a></li>
+              <li><a href="causes.html">Causas</a></li>
+              <li class="dropdown">
+                <a href="#" data-toggle="dropdown" class="dropdown-toggle">Páginas</a>
+                <ul class="dropdown-menu">
+                  <li><a href="testimonial.html">Testimonios</a></li>
+                  <li><a href="gallery.html">Galería</a></li>
+                  <li><a href="contact.html">Contacto</a></li>
+                  <!--<li class="dropdown-submenu dropdown">
+                    <a href="#" data-toggle="dropdown" class="dropdown-toggle"><span>Sub Menu</span></a>
+                    <ul class="dropdown-menu">
+                      <li><a href="blog.html">Segundo Nivel Menu</a></li>
+                      <li><a href="#">Segundo Nivel Menu</a></li>
+                    </ul>
+                  </li>-->
                 </ul>
-              </div>
-            </div>
-            <div class="col-md-4 probootstrap-animate">
-              <div class="probootstrap-footer-widget">
-                <h3>Contacto</h3>
-                <ul class="probootstrap-contact-info">
-                  <li><i class="icon-mail"></i><span>info@fundacionfenna.org</span></li>
-                  <li><i class="icon-phone2"></i><span>+506 88562414</span></li>
-                </ul>
-                <hr>
-                <ul class="probootstrap-contact-info">
-                  <li><a href="privacy.html">Políticas de Privacidad</a></li>
-                  <li><a href="terms.html">Terminos y condiciones</a></li>
-
-              </div>
-            </div>
-
-            <div class="col-md-4 probootstrap-animate">
-              <div class="probootstrap-footer-widget">
-                <h3>Donación</h3>
-                <p>Te invitamos a donar por medio de transferencia bancaria o tarjeta de crédito/débito. Todos los fondos se destinarán a alguna de nuestras causas y publicaremos los resultados tan pronto se ejecuten.</p>
-              </div>
-            </div>
+              </li>
+              
+              <!--<li class="probootstra-cta-button last"><a href="donate.html" class="btn btn-primary" onclick="getData('Todas las Causas')">Donar</a></li>-->
+            </ul>
           </div>
         </div>
-
-        <div class="probootstrap-copyright">
+      </nav>
+        
+        <section class="probootstrap-hero probootstrap-hero-inner" style="background-image: url(img/hero_bg_bw_1.jpg)"  data-stellar-background-ratio="0.5">
           <div class="container">
             <div class="row">
-              <div class="col-md-8 text-left">
-                <p>&copy; 2021. All Rights Reserved. Designed &amp; Developed with <i class="icon icon-heart"></i> by <a href="https://uicookies.com/">uicookies.com</a></p>
-              </div>
-              <div class="col-md-4 probootstrap-back-to-top">
-                <p><a href="#" class="js-backtotop">Ir arriba <i class="icon-arrow-long-up"></i></a></p>
+              <div class="col-md-12">
+                <div class="probootstrap-slider-text probootstrap-animate" data-animate-effect="fadeIn">
+                  <h1 class="probootstrap-heading probootstrap-animate">Donar <span>Fundación para el Fomento Educativo y de Nutrición para la Niñez y Adolecencia</span></h1>
+                </div>
               </div>
             </div>
           </div>
+        </section>
+
+        <section class="probootstrap-section" id='i'>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 probootstrap-animate">
+                        <h3>Tarjeta de crédito/débito</h3>
+                        <form id="regForm" class="probootstrap-form">
+                            <div class="tab form-group" style="animation: fadeMe 1s;">
+                                <label for="amt">Monto en dólares</label>
+                                <input type="number" class="form-control" id="amount_subs" name="amount";>
+                                <hr>
+                                <div id="radios">
+                                    <label for="Tipo-Donacion">Donativo por Subscripción</label>
+                                    <label class="switch" style="margin-left:1em;"><input type="checkbox" id="check_subs" onclick="subscripcion()"><span class="slider round"> </span></label>
+                                </div>
+                                <label for="Plan">Tipo de Donación</label>
+                                <div id="radios">
+                                    <label><input type="radio" name="radio2" id="rad_plan_a" style="margin-top:12px;" value='Plan A' onclick="f_plan()" disabled> Plan A </label>
+                                    <label><input type="radio" name="radio2" id="rad_plan_b" style="margin-left:1em" value='Plan B' onclick="f_plan()" disabled> Plan B </label>
+                                    <label><input type="radio" name="radio2" id="rad_plan_c" style="margin-left:1em" value='Plan C' onclick="f_plan()"disabled> Plan C </label>
+                                    <label><input type="radio" name="radio2" id="rad_plan_per" style="margin-left:1em" value='Personalizado' onclick="f_plan()"disabled> Personalizado </label>
+                                </div> 
+                                <div class="form-group">
+                                    <label for="per">Periodicidad</label>
+                                    <div id="radios" name="div_rad">
+                                      <label><input type="radio" name="rad_per" id="rad_per_mes" style="margin-left:1em" value='Mensual' disabled> Mensual </label>
+                                      <label><input type="radio" name="rad_per" id="rad_per_tri" style="margin-left:1em" value='Trimestral' disabled> Trimestral </label>
+                                      <label><input type="radio" name="rad_per" id="rad_per_sem" style="margin-left:1em" value='Semestral' disabled> Semestral </label>
+                                    </div> 
+                                  </div>
+                                <label>Fecha de inicio</label>
+                                <div id="radios">
+                                    <input type="date" id="start" name="trip-start" disabled>
+                                </div>
+                                  
+                            </div>
+
+                                                        
+                            <div class="tab form-group" style="animation: fadeMe 1s;">
+                              <label for="name">Nombre completo</label>
+                              <input type="text" class="form-control" id="name" name="name">
+                              <label for="email">Email</label>
+                              <input type="email" class="form-control" id="email" name="email">
+                              <label for="telefono">Telefono</label>
+                              <input type="tel" class="form-control" id="tefefono" name="tefefono">
+                              <div class="form-group">
+                              <label for="A-nombre">A nombre</label>
+                              <div id="radios">
+                                <label><input type="radio" name="radio_anombre" style="margin-top:12px;" value="Personal" checked> Personal </label>
+                                <label><input type="radio" name="radio_anombre" style="margin-left:1em" value="Empresarial"> Empresarial </label>
+                                <label><input type="radio" name="radio_anombre" style="margin-left:1em" value="Anónimo"> Anónimo </label>
+                              </div>
+                              <label for="Causa">Causa</label>
+                              <div id="radios">
+                                  <label id="causa" name="causa">Todas las causas</label>
+                              </div>
+                            </div>
+                          </div>
+
+                            <!--<div class="tab">-->
+
+                                <div class="probootstrap-animate checkout tab">
+
+                                <div class="credit-card-box">
+                                    <div class="flip">
+                                      <div class="front">
+                                        <div class="chip"></div>
+                                            <div class="logo">
+                                            <img id="marca1" src="fonts/icomoon/others.svg" width="47.834px" height="47.834px"><img/>
+                                            </div>
+                                        <div class="number"></div>
+                                        <div class="card-holder">
+                                          <label>Titular de la tarjeta</label>
+                                          <div></div>
+                                        </div>
+                                        <div class="card-expiration-date">
+                                          <label>Fecha de expiración</label>
+                                          <div></div>
+                                        </div>
+                                      </div>
+                                      <div class="back">
+                                        <div class="strip"></div>
+                                        <div class="logo">
+                                          <img id="marca2" src="fonts/icomoon/others.svg" width="47.834px" height="47.834px"><img/>
+                                        </div>
+                                        <div class="ccv">
+                                          <label>CCV</label>
+                                          <div></div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="form" autocomplete="off" novalidate>
+
+                                        <fieldset>
+                                        <label for="card-number">Número de tarjeta</label>
+                                        <input type="num" id="card-number" class="input-cart-number" maxlength="4" oninput="f_marca()" />
+                                        <input type="num" id="card-number-1" class="input-cart-number" maxlength="4" />
+                                        <input type="num" id="card-number-2" class="input-cart-number" maxlength="4" />
+                                        <input type="num" id="card-number-3" class="input-cart-number" maxlength="4" />
+                                        </fieldset>
+                                        <fieldset>
+                                        <label for="card-holder">Titular de la tarjeta</label>
+                                        <input type="text" id="card-holder" maxlength="30" />
+                                        </fieldset>
+                                        <fieldset class="fieldset-expiration">
+                                        <label for="card-expiration-month">Fecha de expiración</label>
+                                        <div class="select">
+                                            <select id="card-expiration-month">
+                                            <option></option>
+                                            <option>01</option>
+                                            <option>02</option>
+                                            <option>03</option>
+                                            <option>04</option>
+                                            <option>05</option>
+                                            <option>06</option>
+                                            <option>07</option>
+                                            <option>08</option>
+                                            <option>09</option>
+                                            <option>10</option>
+                                            <option>11</option>
+                                            <option>12</option>
+                                            </select>
+                                        </div>
+                                        <div class="select">
+                                            <select id="card-expiration-year">
+                                            <option></option>
+                                            <option>2019</option>
+                                            <option>2020</option>
+                                            <option>2021</option>
+                                            <option>2022</option>
+                                            <option>2023</option>
+                                            <option>2024</option>
+                                            <option>2025</option>
+                                            <option>2026</option>
+                                            <option>2027</option>
+                                            <option>2028</option>
+                                            </select>
+                                        </div>
+                                        </fieldset>
+                                        <fieldset class="fieldset-ccv">
+                                        <label for="card-ccv">CCV</label>
+                                        <input type="text" id="card-ccv" maxlength="4" />
+                                        </fieldset>
+                                        <button class="btn" type="submit"><i class="fa fa-lock" hidden></i> Donar</button>
+                                    </div>
+                                </div>
+
+
+
+
+
+
+                            <!--</div>-->
+
+
+                            <div style="overflow:auto;">
+                                <div style="float:right;">
+                                <button type="button" id="prevBtn" onclick="nextPrev(-1)">Anterior</button>
+                                <button type="button" id="nextBtn" onclick="nextPrev(1)">Siguiente</button>
+                                </div>
+                            </div>
+                            <div style="text-align:center;">
+                                <span class="step"></span>
+                                <span class="step"></span>
+                                <span class="step"></span>
+                            </div>
+                          </form>
+
+
+                    </div>
+
+                    <div class="col-md-6 probootstrap-animate">
+
+                        <h3>Transferencia Bancaria</h3>
+                        <table id="bank_accounts" >
+                          <tr>
+                            <th>Banco</th>
+                            <th>Moneda </th>
+                            <th>Número de Cuenta IBAN </th>
+                          </tr>
+                          <tr>
+                            <td>BAC San José</td>
+                            <td>Colones</td>
+                            <td>CR 3201 0200 0009 5233 4017</td>
+                          </tr>
+                          <tr>
+                            <td>BAC San José</td>
+                            <td>Dólares</td>
+                            <td>CR 3501 0200 0092 9174 4158</td>
+                          </tr>
+                          <tr>
+                            <td>Banco de Costa Rica</td>
+                            <td>Colones</td>
+                            <td>CR 3201 0200 0009 5233 4017</td>
+                          </tr>
+                          <tr>
+                            <td>Banco de Costa Rica</td>
+                            <td>Dólares</td>
+                            <td>CR 3501 0200 0092 9174 4158</td>
+                          </tr>
+                          <tr>
+                            <td>Banco Nacional</td>
+                            <td>Colones</td>
+                            <td>CR 3201 0200 0009 5233 4017</td>
+                          </tr>
+                          <tr>
+                            <td>Banco Nacional</td>
+                            <td>Dólares</td>
+                            <td>CR 3501 0200 0092 9174 4158</td>
+                          </tr>
+                          <tr>
+                            <td>Davivienda</td>
+                            <td>Colones</td>
+                            <td>CR 3201 0200 0009 5233 4017</td>
+                          </tr>
+                          <tr>
+                            <td>Davivienda</td>
+                            <td>Dólares</td>
+                            <td>CR 3501 0200 0092 9174 4158</td>
+                          </tr>
+                        </table>
+
+<hr>
+
+                        <h3>Simpe Móvil</h3>
+                        <table id="bank_accounts" >
+                          <tr>
+                            <th>Número Telefónico</th>
+                          </tr>
+                          <tr>
+                            <td>+506 88562414</td>
+                          </tr>
+                        </table>
+
+
+        
+                    </div>
+
+
+                </div>
+            </div>
+
+
+
+
+
+
+
+        </section>
+
+
+
+
+
+
+
+<footer class="probootstrap-footer probootstrap-bg">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 probootstrap-animate">
+          <div class="probootstrap-footer-widget">
+            <h3>Sobre Nosotros</h3>
+            <p>FENNA es una organización sin fines de lucro que se dedica a impulsar causas de carácter educativo y de nutrición para la Niñez y Adolescencia en Costa Rica. Encuéntranos además en nuestras redes sociales y ayúdanos a ayudar.</p>
+            <ul class="probootstrap-footer-social">
+              <li><a href="#"><i class="icon-facebook"></i></a></li>
+              <li><a href="#"><i class="icon-instagram"></i></a></li>
+              <li><a href="#"><i class="icon-youtube"></i></a></li>
+            </ul>
+          </div>
         </div>
-      </footer>
+        <div class="col-md-4 probootstrap-animate">
+          <div class="probootstrap-footer-widget">
+            <h3>Contacto</h3>
+            <ul class="probootstrap-contact-info">
+              <li><i class="icon-mail"></i><span>info@fundacionfenna.org</span></li>
+              <li><i class="icon-phone2"></i><span>+506 88562414</span></li>
+            </ul>
+            <hr>
+            <ul class="probootstrap-contact-info">
+              <li><a href="privacy.html">Políticas de Privacidad</a></li>
+              <li><a href="terms.html">Terminos y condiciones</a></li>
 
-      <script src="js/scripts.min.js"></script>
-      <script src="js/main.min.js"></script>
-      <script src="js/custom.js"></script>
-      <script src="js/card.js"></script>
-      <script src="js/donate_only.js"></script>
-      <!--<script src="js/mask_creditcard.js"></script>-->
-  
-       <!--<script type="text/javascript">
-        document.getElementById("causa").value=localStorage.getItem("txtCausa");
-      </script>-->
+          </div>
+        </div>
 
-  </body>
+        <div class="col-md-4 probootstrap-animate">
+          <div class="probootstrap-footer-widget">
+            <h3>Donación</h3>
+            <p>Te invitamos a donar por medio de transferencia bancaria o tarjeta de crédito/débito. Todos los fondos se destinarán a alguna de nuestras causas y publicaremos los resultados tan pronto se ejecuten.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="probootstrap-copyright">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 text-left">
+            <p>&copy; 2021. All Rights Reserved. Designed &amp; Developed with <i class="icon icon-heart"></i> by <a href="https://uicookies.com/">uicookies.com</a></p>
+          </div>
+          <div class="col-md-4 probootstrap-back-to-top">
+            <p><a href="#" class="js-backtotop">Ir arriba <i class="icon-arrow-long-up"></i></a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+    <script src="js/scripts.min.js"></script>
+    <script src="js/main.min.js"></script>
+    <script src="js/custom.js"></script>
+    <script src="js/card.js"></script>
+    <script src="js/donate_only.js"></script>
+    <script src="js/wizard.js"></script>
+
+</body>
 </html>

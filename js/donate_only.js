@@ -10,13 +10,16 @@ v_info_details = '';
 v_info_plan = '';
 v_info_subs = '';
 
+function setDataSubs(){
+    localStorage.setItem("validaSubs", '1');
+}
+
 
 v_validasubs = localStorage.getItem("validaSubs");
 if(v_validasubs=='1'){
     v_subs = document.getElementById('check_subs')
     v_subs.checked=true;
-    window.location.href="#h3_tarjeta";
-    openModal();
+    subscripcion();
     localStorage.setItem("validaSubs", '0');
 };
 
@@ -40,7 +43,7 @@ document.getElementById('start').setAttribute("min", today);
 	document.getElementById("amount").value=v_value;
   }
 
-  function validaemail() {
+  /*function validaemail() {
 	v_mail=document.getElementById("email").value;
 	v_regx = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 	if(v_regx.test(v_mail)){
@@ -49,7 +52,7 @@ document.getElementById('start').setAttribute("min", today);
 	else{
 		alert("adios")
 	}
-  }
+  }*/
 
   	function validatarjeta() {
 		v_mail=document.getElementById("tarjeta").value;
@@ -63,7 +66,7 @@ document.getElementById('start').setAttribute("min", today);
   	}
 
 
-	function slideUp(e) {
+	/*function slideUp(e) {
 		var elem = document.getElementById(e);
 		elem.style.transition = "opacity 0.5s linear 0.5s, visibility 0.5s linear 0.5s";
 		//elem.style.height = "0px";
@@ -79,10 +82,10 @@ document.getElementById('start').setAttribute("min", today);
 		elem.style.opacity = 1;
 		elem.style.visibility ='visible';
 
-  	}
+  	}*/
 
 
-	function validateContact() {
+	/*function validateContact() {
 		var valid = true;
 		$("#frmContact input[required=true], #frmContact textarea[required=true]").each(function(){
 			$(this).removeClass('invalid');
@@ -99,10 +102,53 @@ document.getElementById('start').setAttribute("min", today);
 			}  
 		}); 
 		return valid;
+	}*/
+
+	function subscripcion() {
+		p_a = document.getElementById("rad_plan_a");
+		p_b = document.getElementById("rad_plan_b");
+		p_c = document.getElementById("rad_plan_c");
+		p_per = document.getElementById("rad_plan_per");
+
+		r_m = document.getElementById("rad_per_mes");
+		r_t = document.getElementById("rad_per_tri");
+		r_s = document.getElementById("rad_per_sem");
+
+		v_calendar=document.getElementById("start");
+		v_subs = document.getElementById('check_subs');
+		v_amount = document.getElementById("amount_subs");
+
+		if (v_subs.checked==true){
+			p_a.checked = true;
+			p_a.disabled = false;
+			p_b.disabled = false;
+			p_c.disabled = false;
+			p_per.disabled = false;
+			
+			r_m.disabled = false;
+			r_t.disabled = false;
+			r_s.disabled = false;
+			v_calendar.disabled = false;
+			f_plan();
+		}
+		else{
+			p_a.disabled = true;
+			p_b.disabled = true;
+			p_c.disabled = true;
+			p_per.disabled = true;
+			
+			r_m.disabled = true;
+			r_t.disabled = true;
+			r_s.disabled = true;
+			v_calendar.disabled = true;
+			v_amount.disabled = false;
+		}
+
+
 	}
 
 
-	function openModal() {
+/*	function openModal() {
 		v_subs = document.getElementById('check_subs')
 		if(v_subs.checked==true){
 			element = document.getElementById("div_modal_1");
@@ -141,7 +187,7 @@ document.getElementById('start').setAttribute("min", today);
 
 			f_clear_subs();
 		}
-	 }
+	 }*/
 
 	function f_marca(){
 		cardnumber = document.getElementById("card-number");
@@ -175,11 +221,11 @@ document.getElementById('start').setAttribute("min", today);
 
 	function f_clear_subs(){
 
-		v_label=document.getElementById("label_plan");
-		v_label.innerHTML ='';
+		//v_label=document.getElementById("label_plan");
+		//v_label.innerHTML ='';
 
-		v_label=document.getElementById("label_info");
-		v_label.innerHTML ='';
+		//v_label=document.getElementById("label_info");
+		//v_label.innerHTML ='';
 
 		v_amount=document.getElementById("amount");
 		v_amount.value =txt_subs.value;
@@ -282,13 +328,13 @@ document.getElementById('start').setAttribute("min", today);
 			v_info_subs='Monto $'+txt_subs.value+' / Periodicidad: '+v_radio_selected+ ' / Desde la fecha: '+ v_calendar.value;
 		}
 
-		v_label=document.getElementById("label_plan");
-		v_label.innerHTML =v_info_plan;
+		//v_label=document.getElementById("label_plan");
+		//v_label.innerHTML =v_info_plan;
 
-		v_label=document.getElementById("label_info");
-		v_label.innerHTML =v_info_subs;
+		//v_label=document.getElementById("label_info");
+		//v_label.innerHTML =v_info_subs;
 
-		v_amount=document.getElementById("amount");
-		v_amount.value =txt_subs.value;
-		v_amount.disabled = true;
+		//v_amount=document.getElementById("amount");
+		//v_amount.value =txt_subs.value;
+		//v_amount.disabled = true;
 	}

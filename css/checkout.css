@@ -51,14 +51,14 @@ Form
   width: 60%;
 }
 .form fieldset.fieldset-expiration .select {
-  width: 84px;
+  width: 75px;
   margin-right: 12px;
   float: left;
 }
 .form fieldset.fieldset-ccv {
   clear: none;
   float: right;
-  width: 86px;
+  width: 75px;
 }
 .form fieldset label {
   display: block;
@@ -84,9 +84,9 @@ Form
 }
 .form fieldset input.input-cart-number,
 .form fieldset .select.input-cart-number {
-  width: 82px;
+  width: 70px;
   display: inline-block;
-  margin-right: 8px;
+  margin-right: 1px;
 }
 .form fieldset input.input-cart-number:last-child,
 .form fieldset .select.input-cart-number:last-child {
@@ -142,12 +142,12 @@ Form
 Checkout
 --------------------*/
 .checkout {
-  margin: 150px 60px 30px;
+  margin: 26% -1px 1%;
   position: relative;
-  width: 460px;
+  width: 100%;
   background: #dddddd;
   border-radius: 4px;
-  padding: 160px 45px 30px;
+  padding: 145px 2% 2%;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
 }
 

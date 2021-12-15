@@ -22,10 +22,6 @@ function getData(v_id){
     localStorage.setItem("txtCausa", v_causa);
 }
 
-function setDataSubs(){
-    localStorage.setItem("validaSubs", '1');
-}
-
 function stoperror(e) {
 	return true;
  }

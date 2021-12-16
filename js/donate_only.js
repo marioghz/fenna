@@ -143,8 +143,6 @@ document.getElementById('start').setAttribute("min", today);
 			v_calendar.disabled = true;
 			v_amount.disabled = false;
 		}
-
-
 	}
 
 	function subscripcion() {
@@ -186,10 +184,7 @@ document.getElementById('start').setAttribute("min", today);
 			v_calendar.disabled = true;
 			v_amount.disabled = false;
 		}
-
-
 	}
-
 
 /*	function openModal() {
 		v_subs = document.getElementById('check_subs')
@@ -230,7 +225,7 @@ document.getElementById('start').setAttribute("min", today);
 
 			f_clear_subs();
 		}
-	 }*/
+	 }*//*-*
 
 	function f_marca(){
 		cardnumber = document.getElementById("card-number");

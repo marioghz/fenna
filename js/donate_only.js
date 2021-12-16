@@ -225,7 +225,7 @@ document.getElementById('start').setAttribute("min", today);
 
 			f_clear_subs();
 		}
-	 }*//*-*
+	 }*/
 
 	function f_marca(){
 		cardnumber = document.getElementById("card-number");

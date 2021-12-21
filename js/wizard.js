@@ -72,3 +72,23 @@ function fixStepIndicator(n) {
   //... and adds the "active" class on the current step:
   x[n].className += " active";
 }
+
+
+function showHidden() {
+  x =document.getElementsByClassName("dispy_hidd");
+  while(x.length>0){
+    x[0].className += " dispy_show";
+    x[0].classList.remove("dispy_hidd");
+    //x[0].className.replace("dispy_hidd", "dispy_show");
+  }
+}
+
+
+function hideDisp() {
+  x =document.getElementsByClassName("dispy_show");
+
+  while(x.length>0){
+    x[0].className+=" dispy_hidd";
+    x[0].classList.remove("dispy_show");
+  }
+}

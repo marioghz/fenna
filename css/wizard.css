@@ -70,10 +70,10 @@
     }
   }
 
-  
 .dispy_hidd { 
   transition: all 1s linear;
   display: none;
+  
 }
 
 .dispy_show { 

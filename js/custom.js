@@ -7,13 +7,17 @@ jQuery(document).ready(function() {
 
 
 /// definimos las fechas limites de las causas
-v_fecha_causa_1 = "Jun 31, 2022 23:59:59";
-v_fecha_causa_2 = "Jul 31, 2022 23:59:59";
-v_fecha_causa_3 = "Oct 30, 2022 23:59:59";
+v_fecha_causa_1 = "Feb 31, 2022 23:59:59";
+v_fecha_causa_2 = "Jan 1, 2023 23:59:59";
+v_fecha_causa_3 = "Jan 1, 2023 23:59:59";
 v_fecha_causa_4 = "Sep 29, 2022 23:59:59";
 v_fecha_causa_5 = "Feb 22, 2022 23:59:59";
 v_fecha_causa_6 = "Dec 31, 2022 23:59:59";
 
+
+function setDataSubs(){
+    localStorage.setItem("validaSubs", '1');
+}
 
 function getData(v_id){
     //gettting the values
@@ -54,15 +58,6 @@ function f_tempo(v_id,v_fecha) {
   }
 
 
-  // Aqui se llama a funcion el temporizador de las fechas limites de cada Causa
-  //var v_causa_1 = setInterval(function(){ f_tempo("v_temp_causa_1",v_fecha_causa_1)},1000);
-  //var v_causa_2 = setInterval(function(){ f_tempo("v_temp_causa_2",v_fecha_causa_2)},1000);
-  //var v_causa_3 = setInterval(function(){ f_tempo("v_temp_causa_3",v_fecha_causa_3)},1000);
-  //var v_causa_4 = setInterval(function(){ f_tempo("v_temp_causa_4",v_fecha_causa_4)},1000);
-  //var v_causa_5 = setInterval(function(){ f_tempo("v_temp_causa_5",v_fecha_causa_5)},1000);
-  //var v_causa_6 = setInterval(function(){ f_tempo("v_temp_causa_6",v_fecha_causa_6)},1000);
-
-  // Aqui se llama a funcion el temporizador de las fechas limites de cada Causa
   f_tempo("v_temp_causa_1",v_fecha_causa_1);
   f_tempo("v_temp_causa_2",v_fecha_causa_2);
   f_tempo("v_temp_causa_3",v_fecha_causa_3);
@@ -71,6 +66,22 @@ function f_tempo(v_id,v_fecha) {
   f_tempo("v_temp_causa_6",v_fecha_causa_6);
   
 
-
+  function showHidden() {
+	x =document.getElementsByClassName("dispy_hidd");
+	while(x.length>0){
+	  x[0].className += " dispy_show";
+	  x[0].classList.remove("dispy_hidd");
+	}
+  }
+  
+  
+  function hideDisp() {
+	x =document.getElementsByClassName("dispy_show");
+  
+	while(x.length>0){
+	  x[0].className+=" dispy_hidd";
+	  x[0].classList.remove("dispy_show");
+	}
+  }
 
 

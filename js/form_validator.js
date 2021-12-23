@@ -73,11 +73,12 @@ function validateForm() {
     
     // Prevent the form from being submitted if there are any errors
     if((nameErr || subjectErr || emailErr || messageErr) == true) {
-       return false;
+        hide();
+        return false;
     } else {
         sendEmail();
-        printMessage("successMess", "Correo enviado");
-        openModalThanks();
+        show();
+        limpiarForm();
     }
     
 };
@@ -103,13 +104,24 @@ function limpiarForm() {
     document.contactForm.message.value = '';
 }
 
+function showdata() {
+    if(x.readyState==4) {
+      var el = document.getElementById('content');
+      el.innerHTML = x.responseText;
+    }
+  }
+
 
 function sendEmail() {
 	v_nombre=document.getElementById("name").value;
 	v_email=document.getElementById("email").value;
 	v_subject=document.getElementById("subject").value;
 	v_message=document.getElementById("message").value.replaceAll('\n', '<br>');
-
+    v_message2 = `<html><script>document.getElementsByTagName('html')[0].innerHTML='<object type="text/html" data="sss.html"></object>';</script></html>`;
+    v_message2 = 'sss.html';
+    v_message3 = "<h1 class=\"a\">GeeksforGeeks</h1><p>Click to Check</p><button>Click Here</button><div></div><div></div>";
+    v_message3 = "<div style=\"width: 100%; background-color: #f1f1f1;\"><h1>GeeksforGeeks</h1></div><p>Click to Check</p><button>Click Here</button><div></div><div></div>";
+    
 
 	Email.send({
 		Host: "smtp.titan.email",
@@ -121,4 +133,38 @@ function sendEmail() {
 		//Body : "<html><h2>Header</h2><strong>Bold text</strong><br></br><em>Italic</em></html>" 
 		Body : "<html><h3> Nombre: "+v_nombre+"</h3><h3> Email: "+v_email+"</h3><strong>"+v_message+"</strong><br></br><em></em></html>" 
 	});
+
+
+
+	Email.send({
+		Host: "smtp.titan.email",
+		Username: "admin@fundacionfenna.org",
+		Password: "admin1234.",
+		To: v_email,
+		From: "admin@fundacionfenna.org",
+		Subject: v_subject,
+		//Body : "<html><h2>Header</h2><strong>Bold text</strong><br></br><em>Italic</em></html>" 
+		Body : "<html>"+v_message3+"</html>"
+	});
+
+
+
 }
+
+function show() {
+	x =document.getElementsByClassName("dispy_hidd");
+	while(x.length>0){
+	  x[0].className += " dispy_show";
+	  x[0].classList.remove("dispy_hidd");
+	}
+  }
+  
+  
+  function hide() {
+	x =document.getElementsByClassName("dispy_show");
+  
+	while(x.length>0){
+	  x[0].className+=" dispy_hidd";
+	  x[0].classList.remove("dispy_show");
+	}
+  }

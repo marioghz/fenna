@@ -14,8 +14,10 @@ Buttons
   background: #bded7d;
   color: white;
   text-decoration: none;
-  margin: 20px 0;
-  padding: 15px 15px;
+  /*margin: 20px 0;
+  padding: 15px 15px;*/
+  margin: 8px 2px;
+  padding: 10px 10px;
   border-radius: 5px;
   position: relative;
 }
@@ -64,9 +66,9 @@ Form
   display: block;
   text-transform: uppercase;
   font-size: 16px;
-  color: rgba(0, 0, 0, 0.6);
+  color: #637381;
   margin-bottom: 5px;
-  font-weight: bold;
+  font-weight: 300;
   /*font-family: Inconsolata;*/
   font-family: Lato,Arial,sans-serif;
 }
@@ -313,4 +315,14 @@ Credit Card
 }
 .the-most img {
   max-width: 100%;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number]{
+  -moz-appearance: textfield;
 }

@@ -83,17 +83,20 @@
             <form  method="dialog" name="contactForm" class="probootstrap-form" onsubmit="return validateForm()">
               <div class="form-group">
                 <label for="name">Nombre completo</label>
-                <input type="text" class="form-control" id="name" name="name">
+                <div class="input-group" style="margin: 0px 0px 12px;"><span class="input-group-addon"> <i class="icon-user"></i></span>
+                <input type="text" class="form-control" id="name" name="name"></div>
                 <div class="error" id="nameErr" style="color: red;"></div>
               </div>
               <div class="form-group">
                 <label for="email">Email</label>
-                <input type="email" class="form-control" id="email" name="email">
+                <div class="input-group" style="margin: 0px 0px 12px;"><span class="input-group-addon"> <i class="icon-mail"></i></span>
+                <input type="email" class="form-control" id="email" name="email"></div>
                 <div class="error" id="emailErr" style="color: red;" ></div>
               </div>
               <div class="form-group">
                 <label for="subject">Asunto</label>
-                <input type="text" class="form-control" id="subject" name="subject">
+                <div class="input-group" style="margin: 0px 0px 12px;"><span class="input-group-addon"> <i class="icon-info"></i></span>
+                <input type="text" class="form-control" id="subject" name="subject"></div>
                 <div class="error" id="subjectErr" style="color: red;"></div>
               </div>
               <div class="form-group">
@@ -107,60 +110,19 @@
               </div>
             </form>
           </div>
-
-          
-
-          <div class="modal-wrapper" id='modal-wrapper'>
-            <div class="modal">
-              <div class="head">
-                <a class="btn-close trigger" onclick="closeModalThanks()">
-                  <span class="icon-circle-with-cross"></span>
-                  <!--<i class="fa fa-times" aria-hidden="true"></i>-->
-                </a>
-              </div>
-              <div class="cont">
-                  <div class="good-job">
-                    <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
-                    <h1>Correo enviado</h1>
-                    <h4>En breve nos pondremos en contacto.</h4>
-                    <h4>¡Gracias por ayudarnos a ayudar!</h4>
-                  </div>
-              </div>
-            </div>
-          </div>
-
-
-
-
-         <!-- <div class="col-md-6 col-md-push-1 probootstrap-animate">
-
-            
-            <h4>USA Office</h4>
-            <ul class="probootstrap-contact-info">
-              <li><i class="icon-pin"></i> <span>198 West 21th Street, Suite 721 New York NY 10016</span></li>
-              <li><i class="icon-email"></i><span>info@domain.com</span></li>
-              <li><i class="icon-phone"></i><span>+123 456 7890</span></li>
-            </ul>
-
-            <h4>Europe Office</h4>
-            <ul class="probootstrap-contact-info">
-              <li><i class="icon-pin"></i> <span>198 West 21th Street, Suite 721 New York NY 10016</span></li>
-              <li><i class="icon-email"></i><span>info@domain.com</span></li>
-              <li><i class="icon-phone"></i><span>+123 456 7890</span></li>
-            </ul>
-
-            <h4>Asia Office</h4>
-            <ul class="probootstrap-contact-info">
-              <li><i class="icon-pin"></i> <span>198 West 21th Street, Suite 721 New York NY 10016</span></li>
-              <li><i class="icon-email"></i><span>info@domain.com</span></li>
-              <li><i class="icon-phone"></i><span>+123 456 7890</span></li>
-            </ul>
-            
-          </div>-->
         </div>
         </div>
+        <div class="dispy_hidd" style="text-align: center;background-color: #eee">
+          <h4>Correo enviado! En breve nos pondremos en contacto.</h4>
+        </div>
+
+
+
       </section>
-      
+
+ 
+
+      <!--<object data="footer_template.html" type="text/html"  width="100%" height="570"></object>-->
 
       <footer class="probootstrap-footer probootstrap-bg">
         <div class="container">
@@ -214,12 +176,12 @@
           </div>
         </div>
       </footer>
-
     <script src="js/scripts.min.js"></script>
     <script src="js/main.min.js"></script>
     <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="js/custom.js"></script>
     <script src="js/form_validator.js"></script>
+
 
   </body>
 </html>

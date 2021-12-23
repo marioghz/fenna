@@ -232,3 +232,14 @@ input[type="time"]::-webkit-clear-button {
 input[type="time"]::-ms-clear {
   display: none;
 }
+
+.dispy_hidd { 
+  transition: all 1s linear;
+  display: none;
+  
+}
+
+.dispy_show { 
+  transition: all 1s linear;
+  display: block;
+}

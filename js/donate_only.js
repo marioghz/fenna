@@ -10,16 +10,14 @@ v_info_details = '';
 v_info_plan = '';
 v_info_subs = '';
 
-function setDataSubs(){
-    localStorage.setItem("validaSubs", '1');
-}
+document.getElementById('causa').innerText=localStorage.getItem("txtCausa");
 
 
 v_validasubs = localStorage.getItem("validaSubs");
 if(v_validasubs=='1'){
-    v_subs = document.getElementById('check_subs')
-    v_subs.checked=true;
-    subscripcion();
+    v_subs = document.getElementById('btn_mensual')
+    v_subs.click();
+	v_subs.
     localStorage.setItem("validaSubs", '0');
 };
 
@@ -43,16 +41,6 @@ document.getElementById('start').setAttribute("min", today);
 	document.getElementById("amount").value=v_value;
   }
 
-  /*function validaemail() {
-	v_mail=document.getElementById("email").value;
-	v_regx = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-	if(v_regx.test(v_mail)){
-		alert("hola")
-	}
-	else{
-		alert("adios")
-	}
-  }*/
 
   	function validatarjeta() {
 		v_mail=document.getElementById("tarjeta").value;
@@ -66,166 +54,6 @@ document.getElementById('start').setAttribute("min", today);
   	}
 
 
-	/*function slideUp(e) {
-		var elem = document.getElementById(e);
-		elem.style.transition = "opacity 0.5s linear 0.5s, visibility 0.5s linear 0.5s";
-		//elem.style.height = "0px";
-		//elem.style.margin = "0px";
-		elem.style.opacity = 0;
-		elem.style.visibility ='hidden';
-	}
-
-  	function slideDown(e) {
-		var elem = document.getElementById(e);
-		//elem.style.transition = "all 1s ease-in-out";
-		elem.style.transition = "opacity 0.5s linear 0.5s, visibility 0.5s linear 0.5s";
-		elem.style.opacity = 1;
-		elem.style.visibility ='visible';
-
-  	}*/
-
-
-	/*function validateContact() {
-		var valid = true;
-		$("#frmContact input[required=true], #frmContact textarea[required=true]").each(function(){
-			$(this).removeClass('invalid');
-			$(this).attr('title','');
-			if(!$(this).val()){ 
-				$(this).addClass('invalid');
-				$(this).attr('title','This field is required');
-				valid = false;
-			}
-			if($(this).attr("type")=="email" && !$(this).val().match(/^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/)){
-				$(this).addClass('invalid');
-				$(this).attr('title','Enter valid email');
-				valid = false;
-			}  
-		}); 
-		return valid;
-	}*/
-
-	function subscripcion() {
-		p_a = document.getElementById("rad_plan_a");
-		p_b = document.getElementById("rad_plan_b");
-		p_c = document.getElementById("rad_plan_c");
-		p_per = document.getElementById("rad_plan_per");
-
-		r_m = document.getElementById("rad_per_mes");
-		r_t = document.getElementById("rad_per_tri");
-		r_s = document.getElementById("rad_per_sem");
-
-		v_calendar=document.getElementById("start");
-		v_subs = document.getElementById('check_subs');
-		v_amount = document.getElementById("amount_subs");
-
-		if (v_subs.checked==true){
-			p_a.checked = true;
-			p_a.disabled = false;
-			p_b.disabled = false;
-			p_c.disabled = false;
-			p_per.disabled = false;
-			
-			r_m.disabled = false;
-			r_t.disabled = false;
-			r_s.disabled = false;
-			v_calendar.disabled = false;
-			f_plan();
-		}
-		else{
-			p_a.disabled = true;
-			p_b.disabled = true;
-			p_c.disabled = true;
-			p_per.disabled = true;
-			
-			r_m.disabled = true;
-			r_t.disabled = true;
-			r_s.disabled = true;
-			v_calendar.disabled = true;
-			v_amount.disabled = false;
-		}
-	}
-
-	function subscripcion() {
-		p_a = document.getElementById("rad_plan_a");
-		p_b = document.getElementById("rad_plan_b");
-		p_c = document.getElementById("rad_plan_c");
-		p_per = document.getElementById("rad_plan_per");
-
-		r_m = document.getElementById("rad_per_mes");
-		r_t = document.getElementById("rad_per_tri");
-		r_s = document.getElementById("rad_per_sem");
-
-		v_calendar=document.getElementById("start");
-		v_subs = document.getElementById('check_subs');
-		v_amount = document.getElementById("amount_subs");
-
-		if (v_subs.checked==true){
-			p_a.checked = true;
-			p_a.disabled = false;
-			p_b.disabled = false;
-			p_c.disabled = false;
-			p_per.disabled = false;
-			
-			r_m.disabled = false;
-			r_t.disabled = false;
-			r_s.disabled = false;
-			v_calendar.disabled = false;
-			f_plan();
-		}
-		else{
-			p_a.disabled = true;
-			p_b.disabled = true;
-			p_c.disabled = true;
-			p_per.disabled = true;
-			
-			r_m.disabled = true;
-			r_t.disabled = true;
-			r_s.disabled = true;
-			v_calendar.disabled = true;
-			v_amount.disabled = false;
-		}
-	}
-
-/*	function openModal() {
-		v_subs = document.getElementById('check_subs')
-		if(v_subs.checked==true){
-			element = document.getElementById("div_modal_1");
-			element.classList.add("active");
-	
-			element = document.getElementById("div_modal_2");
-			element.classList.add("active");
-		}
-		else{
-			//slideUp("div_subs_info")
-			v_amount=document.getElementById("amount");
-			v_amount.disabled = false;
-			f_clear_subs();
-		}
-	 }
-
-	 function closeModal(v_val) {
-		element = document.getElementById("div_modal_1");
-		element.classList.remove("active");
-
-		element = document.getElementById("div_modal_2");
-		element.classList.remove("active");
-
-		//slideDown("div_subs_info");
-		f_plan();
-
-		if(v_val==false){
-			v_subs = document.getElementById('check_subs')
-			v_subs.checked=false;
-			v_amount= document.getElementById("amount");
-			v_amount.value ='';
-
-			//slideUp("div_subs_info")
-			v_amount=document.getElementById("amount");
-			v_amount.disabled = false;
-
-			f_clear_subs();
-		}
-	 }*/
 
 	function f_marca(){
 		cardnumber = document.getElementById("card-number");
@@ -375,4 +203,10 @@ document.getElementById('start').setAttribute("min", today);
 		//v_amount=document.getElementById("amount");
 		//v_amount.value =txt_subs.value;
 		//v_amount.disabled = true;
+	}
+
+
+	function f_amount(v){
+		z=v.value;
+		document.getElementById("amount_subs").value=z;
 	}

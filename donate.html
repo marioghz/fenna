@@ -84,40 +84,22 @@
                             <div class="tab form-group" style="animation: fadeMe 1s;">
                                 <label for="Plan">Tipo de Donación</label>
                                 <div class="btn-group" style="width: 100%;">
-                                  <button type="button" class="btn btn-primary" onclick="hideDisp()">Una vez</button>
-                                  <button type="button" class="btn btn-primary" onclick="showHidden()">Mensual</button>
+                                  <button type="button" id='btn_onetime' class="btn btn-primary" onclick="hideDisp()">Una vez</button>
+                                  <button type="button" id='btn_mensual' class="btn btn-primary" onclick="showHidden()">Mensual</button>
                                 </div>
 
-                                <!--<div id="radios">
-                                    <label for="Tipo-Donacion">Donativo por Subscripción</label>
-                                    <label class="switch" style="margin-left:1em;"><input type="checkbox" id="check_subs" onclick="subscripcion()"><span class="slider round"> </span></label>
-                                </div>-->
+                                
                                 <hr  class="disp dispy_hidd">
 
                                 <label  id="lbl_monto" class="disp dispy_hidd">Monto Mensual</label>
                                 <div class="disp dispy_hidd">
-                                  <button type="button" class="btn btn-primary btn-black" style="display: inline-block;" >₡10.000</button>
-                                  <button type="button" class="btn btn-primary btn-black" style="display: inline-block;" >₡25.000</button>
-                                  <button type="button" class="btn btn-primary btn-black" style="display: inline-block;" >₡50.000</button>
+                                  <button type="button" class="btn btn-primary btn-black" style="display: inline-block;" value=10000 onclick="f_amount(this)">₡10.000</button>
+                                  <button type="button" class="btn btn-primary btn-black" style="display: inline-block;" value=25000 onclick="f_amount(this)">₡25.000</button>
+                                  <button type="button" class="btn btn-primary btn-black" style="display: inline-block;" value=50000 onclick="f_amount(this)">₡50.000</button>
                                 </div>
                                 <label class="disp dispy_hidd">** O digite el monto que desee en la casilla de monto</label>
                                 <hr  class="disp dispy_hidd">
- <!--                               
-                                <div id="radios">
-                                    <label><input type="radio" name="radio2" id="rad_plan_a" style="margin-top:12px;" value='Plan A' onclick="f_plan()" disabled> Plan A </label>
-                                    <label><input type="radio" name="radio2" id="rad_plan_b" style="margin-left:1em" value='Plan B' onclick="f_plan()" disabled> Plan B </label>
-                                    <label><input type="radio" name="radio2" id="rad_plan_c" style="margin-left:1em" value='Plan C' onclick="f_plan()"disabled> Plan C </label>
-                                    <label><input type="radio" name="radio2" id="rad_plan_per" style="margin-left:1em" value='Personalizado' onclick="f_plan()"disabled> Personalizado </label>
-                                </div> 
-                                <div class="form-group">
-                                    <label for="per">Periodicidad</label>
-                                    <div id="radios" name="div_rad">
-                                      <label><input type="radio" name="rad_per" id="rad_per_mes" style="margin-left:1em" value='Mensual' disabled> Mensual </label>
-                                      <label><input type="radio" name="rad_per" id="rad_per_tri" style="margin-left:1em" value='Trimestral' disabled> Trimestral </label>
-                                      <label><input type="radio" name="rad_per" id="rad_per_sem" style="margin-left:1em" value='Semestral' disabled> Semestral </label>
-                                    </div> 
-                                  </div>
--->
+
                                 <label class="disp dispy_hidd">Fecha de inicio</label>
                                 <div id="radios"  class="disp dispy_hidd">
                                     <input type="date" id="start" name="trip-start" onkeydown="return false" >
@@ -137,11 +119,14 @@
                                                         
                             <div class="tab form-group" style="animation: fadeMe 1s;">
                               <label for="name">Nombre completo</label>
-                              <input type="text" class="form-control" id="name" name="name">
+                              <div class="input-group" style="margin: 0px 0px 12px;"><span class="input-group-addon"> <i class="icon-user"></i></span>
+                              <input type="text" class="form-control" id="name" name="name"></div>
                               <label for="email">Email</label>
-                              <input type="email" class="form-control" id="email" name="email">
+                              <div class="input-group" style="margin: 0px 0px 12px;"><span class="input-group-addon"> <i class="icon-mail"></i></span>
+                              <input type="email" class="form-control" id="email" name="email"></div>
                               <label for="telefono">Telefono</label>
-                              <input type="tel" class="form-control" id="tefefono" name="tefefono">
+                              <div class="input-group" style="margin: 0px 0px 12px;"><span class="input-group-addon"> <i class="icon-mobile"></i></span>
+                              <input type="tel" class="form-control" id="tefefono" name="tefefono"></div>
                               <div class="form-group">
                               <label for="A-nombre">A nombre</label>
                               <div id="radios">
@@ -193,10 +178,10 @@
 
                                         <fieldset>
                                         <label for="card-number">Número de tarjeta</label>
-                                        <input type="num" id="card-number" class="input-cart-number" maxlength="4" oninput="f_marca()" />
-                                        <input type="num" id="card-number-1" class="input-cart-number" maxlength="4" />
-                                        <input type="num" id="card-number-2" class="input-cart-number" maxlength="4" />
-                                        <input type="num" id="card-number-3" class="input-cart-number" maxlength="4" />
+                                        <input type="number" id="card-number" class="input-cart-number" placeholder="0000" oninput="f_marca()" />
+                                        <input type="number" id="card-number-1" class="input-cart-number" placeholder="0000"/>
+                                        <input type="number" id="card-number-2" class="input-cart-number" placeholder="0000"/>
+                                        <input type="number" id="card-number-3" class="input-cart-number" placeholder="0000" onKeyPress="if(this.value.length==4) return false;"/>
                                         </fieldset>
                                         <fieldset>
                                         <label for="card-holder">Titular de la tarjeta</label>
@@ -322,7 +307,7 @@
 
 <hr>
 
-                        <h3>Simpe Móvil</h3>
+                        <h3>Sinpe Móvil</h3>
                         <table id="bank_accounts" >
                           <tr>
                             <th>Número Telefónico</th>

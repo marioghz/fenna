@@ -1,8 +1,7 @@
 $('.input-cart-number').on('keyup change', function(){
     $t = $(this);
-    
     if ($t.val().length > 3) {
-      $t.next().focus();
+        $t.next().focus();
     }
     
     var card_number = '';

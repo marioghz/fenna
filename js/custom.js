@@ -33,6 +33,7 @@ function stoperror(e) {
 function f_tempo(v_id,v_fecha) {
 	// Get today's date and time
 	var now = new Date().getTime();
+	let en = v_id.substring(v_id.length - 2);
   
 	// Find the distance between now and the count down date
 	var countDownDate = new Date(v_fecha).getTime();
@@ -45,14 +46,21 @@ function f_tempo(v_id,v_fecha) {
 
 	// Display the result in the element with id=v_id
 	try {
-		document.getElementById(v_id).innerHTML = months + " mes(es) " + days + " día(s) restantes";
+		if(en=='en'){
+			document.getElementById(v_id).innerHTML = months + " month(s) " + days + " day(s) remaining";
+		}
+		else{
+			document.getElementById(v_id).innerHTML = months + " mes(es) " + days + " día(s) restantes";
+		}
+		
 	 } catch (e) { stoperror(e) }
 	
   
 	// If the count down is finished, write some text
 	if (distance < 0) {
 	  try {
-		document.getElementById(v_id).innerHTML = "FINALIZADO";
+		if(en=='en'){document.getElementById(v_id).innerHTML = "FINISHED";}
+		else{document.getElementById(v_id).innerHTML = "FINALIZADO";}
 	 } catch (e) { stoperror(e) }
 	}
   }
@@ -64,6 +72,13 @@ function f_tempo(v_id,v_fecha) {
   f_tempo("v_temp_causa_4",v_fecha_causa_4);
   f_tempo("v_temp_causa_5",v_fecha_causa_5);
   f_tempo("v_temp_causa_6",v_fecha_causa_6);
+
+  f_tempo("v_temp_causa_1_en",v_fecha_causa_1);
+  f_tempo("v_temp_causa_2_en",v_fecha_causa_2);
+  f_tempo("v_temp_causa_3_en",v_fecha_causa_3);
+  f_tempo("v_temp_causa_4_en",v_fecha_causa_4);
+  f_tempo("v_temp_causa_5_en",v_fecha_causa_5);
+  f_tempo("v_temp_causa_6_en",v_fecha_causa_6);
   
 
   function showHidden() {

@@ -136,19 +136,6 @@ function sendEmail() {
 
 
 
-	Email.send({
-		Host: "smtp.titan.email",
-		Username: "admin@fundacionfenna.org",
-		Password: "admin1234.",
-		To: v_email,
-		From: "admin@fundacionfenna.org",
-		Subject: v_subject,
-		//Body : "<html><h2>Header</h2><strong>Bold text</strong><br></br><em>Italic</em></html>" 
-		Body : "<html>"+v_message3+"</html>"
-	});
-
-
-
 }
 
 function show() {

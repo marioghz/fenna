@@ -1,26 +1,21 @@
 <!DOCTYPE html>
 
-<html lang="es">
+<html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Fundación FENNA</title>
-    <meta name="description" content="Fundación para el Fomento Educativo y de Nutrición para la Niñez y Adolecencia">
-    <meta name="keywords" content="Fundación para el Fomento Educativo y de Nutrición para la Niñez y Adolecencia">
+    <Goal charset="utf-8">
+    <Goal name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fundacion FENNA</title>
+    <Goal name="description" content="Fundación para el Fomento Educativo y de Nutrición para la Niñez y Adolecencia">
+    <Goal name="keywords" content="Fundación para el Fomento Educativo y de Nutrición para la Niñez y Adolecencia">
     
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700|Montserrat:300,400,700,900" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles-merged.css">
-    <link rel="stylesheet" href="css/style.min.css">
-    <link rel="stylesheet" href="css/custom.css">
-    <link rel="stylesheet" href="css/modal_thanks.css">
-    <link rel="stylesheet" href="fonts/icomoon demo/style.css">
-    <link rel="icon" href="img/favicon_io/favicon.ico">
+    <link rel="stylesheet" href="../css/styles-merged.css">
+    <link rel="stylesheet" href="../css/style.min.css">
+    <link rel="stylesheet" href="../css/custom.css">
+    <link rel="stylesheet" href="../css/modal_thanks.css">
+    <link rel="stylesheet" href="../fonts/icomoon demo/style.css">
+    <link rel="icon" href="../img/favicon_io/favicon.ico">
 
-
-    <!--[if lt IE 9]>
-      <script src="js/vendor/html5shiv.min.js"></script>
-      <script src="js/vendor/respond.min.js"></script>
-    <![endif]-->
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-CD4GLFP1KF"></script>
@@ -31,7 +26,6 @@
 
       gtag('config', 'G-CD4GLFP1KF');
     </script>
-
 
   </head>
   <body>
@@ -50,16 +44,17 @@
         </div>
         <div id="navbar-collapse" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="index.html">Principal</a></li>
-            <li><a href="about.html">Sobre Nosotros</a></li>
-            <li><a href="news.html">Noticias</a></li>
-            <li><a href="causes.html">Causas</a></li>
+            
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="../news.html">News</a></li>
+            <li><a href="causes.html">Causes</a></li>
             <li class="dropdown active">
-              <a href="#" data-toggle="dropdown" class="dropdown-toggle">Páginas</a>
+              <a href="#" data-toggle="dropdown" class="dropdown-toggle">Pages</a>
               <ul class="dropdown-menu">
-                <li><a href="testimonial.html">Testimonios</a></li>
-                <li><a href="gallery.html">Galería</a></li>
-                <li><a href="contact.html">Contacto</a></li>
+                <li><a href="../testimonial.html">Testimonial</a></li>
+                <li><a href="../gallery.html">Galery</a></li>
+                <li><a href="../contact.html">Contact</a></li>
                 <!--<li class="dropdown-submenu dropdown">
                   <a href="#" data-toggle="dropdown" class="dropdown-toggle"><span>Sub Menu</span></a>
                   <ul class="dropdown-menu">
@@ -69,21 +64,20 @@
                 </li>-->
               </ul>
             </li>
-            
-            <li class="probootstra-cta-button last"><a href="donate.html" class="btn btn-primary" onclick="getData('Todas las Causas')">Donar</a></li>
+            <li class="probootstra-cta-button last"><a href="donate.html" class="btn btn-primary" onclick="getData('Todas las Causas')">Donate</a></li>
             <li><a></a></li>
-            <li><a href="en/contact.html"><img id="en" src="fonts/icomoon/uk.svg" width="35px" height="25px"><img/></a></li>
+            <li><a href="../contact.html"><img id="en" src="../fonts/icomoon/cr.svg" width="35px" height="25px"><img/></a></li>
           </ul>
         </div>
       </div>
     </nav>
       
-      <section class="probootstrap-hero probootstrap-hero-inner" style="background-image: url(img/hero_bg_bw_1.jpg)"  data-stellar-background-ratio="0.5">
+      <section class="probootstrap-hero probootstrap-hero-inner" style="background-image: url(../img/hero_bg_bw_1.jpg)"  data-stellar-background-ratio="0.5">
         <div class="container">
           <div class="row">
             <div class="col-md-12">
               <div class="probootstrap-slider-text probootstrap-animate" data-animate-effect="fadeIn">
-                <h1 class="probootstrap-heading probootstrap-animate">Contáctanos <span>Fundación para el Fomento Educativo y de Nutrición para la Niñez y Adolecencia</span></h1>
+                <h1 class="probootstrap-heading probootstrap-animate">Contact <span>Foundation for Educational Promotion and Nutrition for Children and Adolescents</span></h1>
               </div>
             </div>
           </div>
@@ -96,7 +90,7 @@
           <div class="col-md-12  probootstrap-animate">
             <form  method="dialog" name="contactForm" class="probootstrap-form" onsubmit="return validateForm()">
               <div class="form-group">
-                <label for="name">Nombre completo</label>
+                <label for="name">Full Name</label>
                 <div class="input-group" style="margin: 0px 0px 12px;"><span class="input-group-addon"> <i class="icon-user"></i></span>
                 <input type="text" class="form-control" id="name" name="name"></div>
                 <div class="error" id="nameErr" style="color: red;"></div>
@@ -108,13 +102,13 @@
                 <div class="error" id="emailErr" style="color: red;" ></div>
               </div>
               <div class="form-group">
-                <label for="subject">Asunto</label>
+                <label for="subject">Subject</label>
                 <div class="input-group" style="margin: 0px 0px 12px;"><span class="input-group-addon"> <i class="icon-info"></i></span>
                 <input type="text" class="form-control" id="subject" name="subject"></div>
                 <div class="error" id="subjectErr" style="color: red;"></div>
               </div>
               <div class="form-group">
-                <label for="message">Mensaje</label>
+                <label for="message">Message</label>
                 <textarea cols="30" rows="10" class="form-control" id="message" name="message"></textarea>
                 <div class="error" id="messageErr" style="color: red;"></div>
               </div>
@@ -127,7 +121,7 @@
         </div>
         </div>
         <div class="dispy_hidd" style="text-align: center;background-color: #eee">
-          <h4>Correo enviado! En breve nos pondremos en contacto.</h4>
+          <h4>Email sent!. We will reach you back shortly.</h4>
         </div>
 
 
@@ -143,8 +137,8 @@
           <div class="row">
             <div class="col-md-4 probootstrap-animate">
               <div class="probootstrap-footer-widget">
-                <h3>Sobre Nosotros</h3>
-                <p>FENNA es una organización sin fines de lucro que se dedica a impulsar causas de carácter educativo y de nutrición para la Niñez y Adolescencia en Costa Rica. Encuéntranos además en nuestras redes sociales y ayúdanos a ayudar.</p>
+                <h3>About Us</h3>
+                <p>FENNA is a non-profit organization that is dedicated to promoting educational and nutritional causes for Children and Adolescents in Costa Rica. Find us on our social networks and help us to help.</p>
                 <ul class="probootstrap-footer-social">
                   <li><a href="#"><i class="icon-facebook"></i></a></li>
                   <li><a href="#"><i class="icon-instagram"></i></a></li>
@@ -154,24 +148,24 @@
             </div>
             <div class="col-md-4 probootstrap-animate">
               <div class="probootstrap-footer-widget">
-                <h3>Contacto</h3>
+                <h3>Contact</h3>
                 <ul class="probootstrap-contact-info">
                   <li><i class="icon-mail"></i><span>info@fundacionfenna.org</span></li>
                   <li><i class="icon-phone2"></i><span>+506 88562414</span></li>
                 </ul>
                 <hr>
                 <ul class="probootstrap-contact-info">
-                  <li><a href="privacy.html">Políticas de Privacidad</a></li>
-                  <li><a href="terms.html">Terminos y condiciones</a></li>
+                  <li><a href="../privacy.html">Privacy Policies</a></li>
+                  <li><a href="../terms.html">Terms and Conditions</a></li>
 
               </div>
             </div>
 
             <div class="col-md-4 probootstrap-animate">
               <div class="probootstrap-footer-widget">
-                <h3>Donación</h3>
-                <p>Te invitamos a donar por medio de transferencia bancaria o tarjeta de crédito/débito. Todos los fondos se destinarán a alguna de nuestras causas y publicaremos los resultados tan pronto se ejecuten.</p>
-                <p><a href="donate.html" class="btn btn-primary">Donar Ahora</a></p>
+                <h3>Donate</h3>
+                <p>We invite you to donate by bank transfer or credit / debit card. All funds will go to one of our causes and we will publish the results as soon as they are executed.</p>
+                <p><a href="donate.html" class="btn btn-primary">Donate Now</a></p>
               </div>
             </div>
           </div>
@@ -184,17 +178,18 @@
                 <p>&copy; 2021. All Rights Reserved. Designed &amp; Developed with <i class="icon icon-heart"></i> by <a href="https://uicookies.com/">uicookies.com</a></p>
               </div>
               <div class="col-md-4 probootstrap-back-to-top">
-                <p><a href="#" class="js-backtotop">Ir arriba <i class="icon-arrow-long-up"></i></a></p>
+                <p><a href="#" class="js-backtotop">Back to top <i class="icon-arrow-long-up"></i></a></p>
               </div>
             </div>
           </div>
         </div>
       </footer>
-    <script src="js/scripts.min.js"></script>
-    <script src="js/main.min.js"></script>
+
+    <script src="../js/scripts.min.js"></script>
+    <script src="../js/main.min.js"></script>
     <script src="https://smtpjs.com/v3/smtp.js"></script>
-    <script src="js/custom.js"></script>
-    <script src="js/form_validator.js"></script>
+    <script src="../js/custom.js"></script>
+    <script src="../js/form_validator.js"></script>
 
 
   </body>

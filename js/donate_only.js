@@ -17,7 +17,6 @@ v_validasubs = localStorage.getItem("validaSubs");
 if(v_validasubs=='1'){
     v_subs = document.getElementById('btn_mensual')
     v_subs.click();
-	v_subs.
     localStorage.setItem("validaSubs", '0');
 };
 
